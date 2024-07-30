@@ -10,7 +10,7 @@ contact:
   location: Seoul, Korea # location
   email: minyoung.choe@kaist.ac.kr    # email address
   phone:  # phone number, format is "+[Country Code] [Area Code (if applicable)] [Local Phone Number]"
-  website: example.com     # site URL without schema, like example.com, will automatically prepand "https://"
+  website: # site URL without schema, like example.com, will automatically prepand "https://"
 
   gender:                  # gender or pronoun
   birthday:                # birthday
@@ -28,7 +28,7 @@ contact:
   threema:                 # userid            | https://threema.id/userid
 
   # programmer
-  github:                  # username          | https://github.com/username
+  github: young917                  # username          | https://github.com/username
   gitlab:                  # username          | https://gitlab.com/username
   bitbucket:               # username          | https://bitbucket.com/username
   stackoverflow:           # id or id/username | https://stackoverflow.com/users/id/username
@@ -39,7 +39,7 @@ contact:
   tryhackme:               # username          | https://tryhackme.com/p/username
 
   # academic
-  googlescholar:           # username          | https://scholar.google.com/citations?user=username
+  googlescholar:  BspjsQIAAAAJ&hl         # username          | https://scholar.google.com/citations?user=username
   researchgate:            # username          | https://www.researchgate.net/profile/username
   kaggle:                  # username          | https://www.kaggle.com/username
   orcid:                   # id                | https://orcid.org/id
@@ -59,7 +59,7 @@ contact:
   artstation:              # username          | https://www.artstation.com/username
 
   # other cv
-  linkedin:                # username          | https://linkedin.com/in/username
+  linkedin:  Minyoung Choe              # username          | https://linkedin.com/in/username
   indeed:                  # resumeid          | https://my.indeed.com/p/resumeid
   xing:                    # username          | https://www.xing.com/profile/username
   fiverr:                  # username          | https://www.fiverr.com/username
