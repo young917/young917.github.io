@@ -60,6 +60,12 @@ section {
   {% if site.link_icon %}
   .section-content {
     .markdown, .items {
+      .authors {
+        display: inline-block; /* Ensures authors are displayed in a line */
+      }
+      .authors .bold {
+        font-weight: bold;
+      }
       a::after {
         display: inline-block;
         text-rendering: auto;
@@ -70,12 +76,6 @@ section {
         font-size: 0.625em;
         margin: 0 0.375em;
         text-decoration: none;
-      }
-      .authors {
-        display: inline-block; /* Ensures authors are displayed in a line */
-      }
-      .authors .bold {
-        font-weight: bold;
       }
     }
   }
