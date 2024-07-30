@@ -100,9 +100,9 @@ experience:
       role: visiting researcher
       location: Pittsburgh, PA, USA
       description: |
-        	+ Visiting researcher under the “Carnegie Mellon University AI Concentrated Education Program,” supported by the Institute for Information and Communication Technology Planning & Evaluation (IITP).
-	        + Taking courses in CMU: Deep Learning/Machine Learning, Scalable Multimedia Data Analysis, and Natural Language Processing.
-	        + Collaborating on research with Prof. Christos Faloutsos at CMU.
+        + Visiting researcher under the “Carnegie Mellon University AI Concentrated Education Program,” supported by the Institute for Information and Communication Technology Planning & Evaluation (IITP).
+        + Taking courses in CMU: Deep Learning/Machine Learning, Scalable Multimedia Data Analysis, and Natural Language Processing.
+        + Collaborating on research with Prof. Christos Faloutsos at CMU.
 
     - company: KAIST
       link:
@@ -217,7 +217,7 @@ education:
       degree: Bachelor
       description: |
         + GPA:  4.14 / 4.3
-	+ Graduated Summa Cum Laude: 1st / 72
+        + Graduated Summa Cum Laude: 1st / 72
 
 
 certificate:
@@ -284,7 +284,7 @@ award:
       description: |
       
     - name: Grand prize in Open-Source Software Contribution
-      awarder: MSIT	
+      awarder: MSIT
       date: 2019.11
       link:
       description: |
