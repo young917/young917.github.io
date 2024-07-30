@@ -215,6 +215,11 @@ publication:
       conference: ECML/PKDD 2024 Workshop
       link: 
       
+    - title: "GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
+      authors: Minyoung Choe*, Juho Jung*, Kushagra Agarwal* and Nivedhitha Dhanasekaran* (* indicates the co-first authors)
+      conference: IJCAI 2024 Workshop 
+      link: 
+      
 award:
   show: true
   order: 7
