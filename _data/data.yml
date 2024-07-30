@@ -359,10 +359,10 @@ interest:
   description: |
     
   items:
-    - item: Reading
+    - item: Graph Mining
       link: '#'
       
-    - item: Cooking
+    - item: Machine Learning
       link:
 
 evaluation:
