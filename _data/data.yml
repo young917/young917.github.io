@@ -202,25 +202,23 @@ education:
   description: |
   
   items:
-    - institution: Example University
-      link: '#'
-      date: 2015 - 2018
-      major: Machine Learning
-      degree: Master
+    - institution: Korea Advanced Institute of Science and Technology (KAIST)
+      link: 
+      date: 2021.03 - Present
+      major: Artificial Intelligence
+      degree: M.S. & Ph.D.
       description: |
-        Additional information for this institution.
-        + First
-        + Second
+        + Advisor: Kijung Shin
 
-    - institution: Example University
+    - institution: Sogang University 
       link:
-      date: 2011 - 2015
-      major: Computer Science
+      date: 2017.03 - 2021.02
+      major: Computer Science and Engineering
       degree: Bachelor
       description: |
-        Additional information for this institution.
-        + First
-        + Second
+        + GPA:  4.14 / 4.3
+	+ Graduated Summa Cum Laude: 1st / 72
+
 
 certificate:
   show: false
