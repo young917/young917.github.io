@@ -29,13 +29,7 @@
 
         {%- if item.authors %}
         <div class="authors">
-          {%- assign authors = item.authors | split: ',' %}
-          {%- for author in authors %}
-            <span class="{% if author == 'Minyoung Choe' %}ul{% else %}normal{% endif %}">
-              {{ author }}
-            </span>
-            {%- unless forloop.last %}, {% endunless %}
-          {%- endfor %}
+          <span>{{ item.authors }}</span>
         </div>
         {%- endif %}
 
