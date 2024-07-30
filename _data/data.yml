@@ -96,7 +96,7 @@ experience:
     - company: Carnegie Mellon University
       link: 
       tags: 
-      date: 2023.08 - 2023.02
+      date: 2023.08 - 2024.02
       role: visiting researcher
       location: Pittsburgh, PA, USA
       description: |
@@ -216,7 +216,7 @@ publication:
       link: 
       
     - title: "GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
-      authors: Minyoung Choe*, Juho Jung*, Kushagra Agarwal* and Nivedhitha Dhanasekaran* (* indicates the co-first authors)
+      authors: <b>Minyoung Choe*</b>, Juho Jung*, Kushagra Agarwal* and Nivedhitha Dhanasekaran* (* indicates the co-first authors)
       conference: IJCAI 2024 Workshop 
       link: 
       
