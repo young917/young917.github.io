@@ -211,7 +211,15 @@ publication:
   
   items:
     - title: "Graphlets over Time: A New Lens for Temporal Network Analysis"
-      authors: { name: Deukryeol Yoon, isBold: false},  { name: Donjin Lee, isBold: false},{ name: Minyoung Choe, isBold: true}, { name: Kijung Shin, isBold: false}
+      authors:
+      - name: "Deukryeol Yoon"
+        isBold: false
+      - name: "Donjin Lee"
+        isBold: false
+      - name: "Minyoung Choe"
+        isBold: true
+      - name: "Kijung Shin"
+        isBold: false
       conference: ECML/PKDD 2024 Workshop
       link: 
       
