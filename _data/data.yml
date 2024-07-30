@@ -254,11 +254,11 @@ publication:
   description: |
   
   items:
-    - title: Graphlets over Time: A New Lens for Temporal Network Analysis
+    - title: "Graphlets over Time: A New Lens for Temporal Network Analysis"
       authors: Deukryeol Yoon, Dongjin Lee, Minyoung Choe, Kijung Shin
       conference: ECML/PKDD 2024 Workshop
       link: 
-    - title: GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records
+    - title: "GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
       authors: ** Minyoung Choe* **, Juho Jung*, Kushagra Agarwal* and Nivedhitha Dhanasekaran* (* indicates the co-first authors)
       conference: IJCAI 2024 Workshop 
       link: 
@@ -266,7 +266,7 @@ publication:
       authors: ** Minyoung Choe **, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, Kijung Shin
       conference: ACM Transactions on Knowledge Discovery from Data 2024
       link: 
-    - title: Classification of Edge-dependent Labels of Nodes in Hypergraphs
+    - title: Temporal Graph Networks for Graph Anomaly Detection in Financial Networks
       authors: Yejin Kim*, Youngbin Lee*, Minyoung Choe, Sungju Oh, Yongjae Lee (* indicates the co-first authors)
       conference: AAAI 2023 Workshop 
       link: 
@@ -282,11 +282,11 @@ publication:
       authors: Sunwoo Kim, Minyoung Choe, Jaemin Yoo, and Kijung Shin
       conference: IEEE ICDM 2022
       link:
-    - title: HashNWalk: Hash and Random Walk Based Anomaly Detection in Hyperedge Streams
+    - title: "HashNWalk: Hash and Random Walk Based Anomaly Detection in Hyperedge Streams"
       authors: Geon Lee, Minyoung Choe, and Kijung Shin
       conference: IJCAI 2022
       link:
-    - title: MiDaS: Representative Sampling from Real-world Hypergraphs
+    - title: "MiDaS: Representative Sampling from Real-world Hypergraphs"
       authors: Minyoung Choe, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, and Kijung Shin
       conference: WWW 2022
       link:
