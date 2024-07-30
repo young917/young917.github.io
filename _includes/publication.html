@@ -29,7 +29,7 @@
 
         {%- if item.authors %}
         <div class="authors">
-          <span>{{ item.authors }}</span>
+          {{ item.authors | markdownify }}
         </div>
         {%- endif %}
 
