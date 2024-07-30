@@ -29,10 +29,13 @@
 
         {%- if item.authors %}
         <div class="authors">
-          <span ng-repeat="author in item.authors.split(',')">
-            <span ng-class="{ 'underline': author.trim() === 'Minyoung Choe' }">{{ author }}</span>
-            <span ng-if="!$last">, </span> <!-- Add comma between authors, except for the last one -->
-          </span>
+          {%- assign authors = item.authors | split: ',' %}
+          {%- for author in authors %}
+            <span class="{% if author == 'Minyoung Choe' %}ul{% else %}normal{% endif %}">
+              {{ author }}
+            </span>
+            {%- unless forloop.last %}, {% endunless %}
+          {%- endfor %}
         </div>
         {%- endif %}
 
