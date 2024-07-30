@@ -71,7 +71,10 @@ section {
         margin: 0 0.375em;
         text-decoration: none;
       }
-      .bold {
+      .authors {
+        display: inline-block; /* Ensures authors are displayed in a line */
+      }
+      .authors .bold {
         font-weight: bold;
       }
     }
