@@ -60,12 +60,6 @@ section {
   {% if site.link_icon %}
   .section-content {
     .markdown, .items {
-      .authors {
-        display: inline-block; /* Ensures authors are displayed in a line */
-      }
-      .authors .bold {
-        font-weight: bold;
-      }
       a::after {
         display: inline-block;
         text-rendering: auto;
