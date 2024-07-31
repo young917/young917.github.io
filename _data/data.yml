@@ -83,7 +83,7 @@ profile:
   order: 1
   title: Profile
   description: |
-    I am a Ph.D. student at KAIST Kim Jaechul Graduate School of AI in the data mining lab, where I am advised by Prof. Kijung Shin. I hold a B.S. in Computer Science and Engineering from Sogang University. My motto is "A man who has had a dream for a long time will finally look like the dream."
+    I am a Ph.D. student in the data mining lab at KAIST Kim Jaechul Graduate School of AI, where I am advised by Prof. Kijung Shin. I hold a B.S. in Computer Science and Engineering from Sogang University. My motto is "A man who has had a dream for a long time will finally look like the dream."
     
 experience:
   show: true
@@ -341,7 +341,7 @@ interest:
     
   items:
     - item: Graph Mining
-      link: '#'
+      link: 
       
     - item: Machine Learning
       link:
