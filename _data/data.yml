@@ -97,7 +97,7 @@ experience:
       link: 
       tags: 
       date: 2023.08 - 2024.02
-      role: visiting researcher
+      role: Visiting researcher
       location: Pittsburgh, PA, USA
       description: |
         + Visiting researcher under the “Carnegie Mellon University AI Concentrated Education Program,” supported by the Institute for Information and Communication Technology Planning & Evaluation (IITP).
@@ -127,7 +127,7 @@ experience:
       link:
       tags: 
       date: 2018.02 - 2019.02
-      role: Student Library Assistant
+      role: Student library assistant
       location: Seoul, Korea
       description: |
 
@@ -227,7 +227,7 @@ publication:
       
     - title: Temporal Graph Networks for Graph Anomaly Detection in Financial Networks
       authors: Yejin Kim*, Youngbin Lee*, Minyoung Choe, Sungju Oh, Yongjae Lee (* indicates the co-first authors)
-      conference: AAAI 2023 Workshop 
+      conference: AAAI 2024 Workshop 
       link: 
       
     - title: Classification of Edge-dependent Labels of Nodes in Hypergraphs
