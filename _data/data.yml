@@ -210,57 +210,57 @@ publication:
   description: |
   
   items:
-    - title: [W3] "Graphlets over Time: A New Lens for Temporal Network Analysis"
+    - title: "[W3] Graphlets over Time: A New Lens for Temporal Network Analysis"
       authors: Deukryeol Yoon, Dongjin Lee, Minyoung Choe, Kijung Shin
       conference: ECML/PKDD 2024 Workshop
       link: 
       
-    - title: [W2] "GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
+    - title: "[W2] GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
       authors: Minyoung Choe*, Juho Jung*, Kushagra Agarwal* and Nivedhitha Dhanasekaran* (* indicates the co-first authors)
       conference: IJCAI 2024 Workshop 
       link: 
 
-    - title: [J1] Representative and Back-In-Time Sampling from Real-world Hypergraphs
+    - title: "[J1] Representative and Back-In-Time Sampling from Real-world Hypergraphs"
       authors: Minyoung Choe, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, Kijung Shin
       conference: ACM Transactions on Knowledge Discovery from Data 2024
       link: 
       
-    - title: [W2] Temporal Graph Networks for Graph Anomaly Detection in Financial Networks
+    - title: "[W2] Temporal Graph Networks for Graph Anomaly Detection in Financial Networks"
       authors: Yejin Kim*, Youngbin Lee*, Minyoung Choe, Sungju Oh, Yongjae Lee (* indicates the co-first authors)
       conference: AAAI 2024 Workshop 
       link: 
       
-    - title: [C6] Classification of Edge-dependent Labels of Nodes in Hypergraphs
+    - title: "[C6] Classification of Edge-dependent Labels of Nodes in Hypergraphs"
       authors: Minyoung Choe, Sunwoo Kim, Jaemin Yoo, and Kijung Shin
       conference: ACM KDD 2023 
       link: 'https://dl.acm.org/doi/10.1145/3580305.3599274'
       
-    - title: [C5] How Transitive Are Real-World Group Interactions? - Measurement and Reproduction
+    - title: "[C5] How Transitive Are Real-World Group Interactions? - Measurement and Reproduction"
       authors: Sunwoo Kim, Fanchen Bu, Minyoung Choe, Jaemin Yoo, and Kijung Shin
       conference: ACM KDD 2023 
       link:
       
-    - title: [C4] "Reciprocity in Directed Hypergraphs: Measures, Findings, and Generators"
+    - title: "[C4] Reciprocity in Directed Hypergraphs: Measures, Findings, and Generators"
       authors: Sunwoo Kim, Minyoung Choe, Jaemin Yoo, and Kijung Shin
       conference: IEEE ICDM 2022
       link:
       
-    - title: [C3] "HashNWalk: Hash and Random Walk Based Anomaly Detection in Hyperedge Streams"
+    - title: "[C3] HashNWalk: Hash and Random Walk Based Anomaly Detection in Hyperedge Streams"
       authors: Geon Lee, Minyoung Choe, and Kijung Shin
       conference: IJCAI 2022
       link:
       
-    - title: [C2] "MiDaS: Representative Sampling from Real-world Hypergraphs"
+    - title: "[C2] MiDaS: Representative Sampling from Real-world Hypergraphs"
       authors: Minyoung Choe, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, and Kijung Shin
       conference: WWW 2022
       link:
       
-    - title: [C1] How Do Hyperedges Overlap in Real-World Hypergraphs? - Patterns, Measures, and Generators
+    - title: "[C1] How Do Hyperedges Overlap in Real-World Hypergraphs? - Patterns, Measures, and Generators"
       authors: Geon Lee*, Minyoung Choe*, and Kijung Shin (* indicates the co-first authors)
       conference: WWW 2021
       link:
       
-    - title: [W1] Pretraining Neural Architecture Search Controllers with Locality-based Self-Supervised Learning
+    - title: "[W1] Pretraining Neural Architecture Search Controllers with Locality-based Self-Supervised Learning"
       authors: Kwanghee Choi*, Minyoung Choe*, Hyelee Lee* (* indicates the co-first authors)
       conference: NeurIPS 2020 Workshop
       link:
