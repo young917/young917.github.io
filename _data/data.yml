@@ -345,13 +345,14 @@ interest:
         + Pattern: Overlaps in Hypergraphs ([C1]), Tendency of simple approaches in hypergraph sampling ([C2 & J1])
         + Generator: HyperLAP reproduces overlaps in real-world hypergraphs ([C1]), MiDaS creates smaller hypergraphs while preserving real-world characteristics ([C2 & J1])
         
+    - name: Knowledge Graph
+      description: |
+        + Recently focused on complex logical reasoning over knowledge graphs
+        
     - name: Deep Learning
       description: |
         + Developed a hypergraph neural network for edge-dependent node labels ([C6])
     
-    - name: Knowledge Graph
-      description: |
-        + Recently focused on complex logical reasoning over knowledge graphs
         
 
 evaluation:
