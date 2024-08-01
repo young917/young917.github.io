@@ -13,19 +13,31 @@
     </div>
     {%- endif %}
 
-    {%- if interest.items %}
+  
+  {%- if interest.items %}
     <div class="items">
       {%- for item in interest.items %}
       <div class="item">
-        {%- if item.link %}
-        <a href="{{ item.link }}" target="_blank">{{ item.item }}</a>
-        {%- else %}
-        <span>{{ item.item }}</span>
+
+        {%- if item.name %}
+        <div class="row">
+          <div class="interest-name">
+            <span>{{ item.name }}</span>
+          </div>
+        </div>
+        
+        {%- if item.description.size > 0 %}
+        <div class="description markdown">
+          {{ item.description | markdownify }}
+        </div>
         {%- endif %}
+        {%- endif %}
+
       </div>
       {%- endfor %}
     </div>
     {%- endif %}
   </div>
+  
 </section>
 {%- endif %}
