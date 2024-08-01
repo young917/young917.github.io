@@ -351,7 +351,7 @@ interest:
         
     - name: Deep Learning
       description: |
-        + Developed a hypergraph neural network for edge-dependent node labels ([C6])
+        + Developed a novel hypergraph neural network for edge-dependent node labels ([C6])
     
         
 
