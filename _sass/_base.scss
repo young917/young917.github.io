@@ -219,6 +219,7 @@ small {
 
   .certificate,
   .award,
+  .interest,
   .reference {
     .section-content {
       .items {
@@ -296,8 +297,7 @@ small {
     }
   }
 
-  .language,
-  .interest {
+  .language {
     .section-content {
       .items {
         display: flex;
