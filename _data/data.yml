@@ -210,12 +210,12 @@ publication:
   description: |
   
   items:
-    - title: "[W3] Graphlets over Time: A New Lens for Temporal Network Analysis"
+    - title: "[W4] Graphlets over Time: A New Lens for Temporal Network Analysis"
       authors: Deukryeol Yoon, Dongjin Lee, Minyoung Choe, Kijung Shin
       conference: ECML/PKDD 2024 Workshop
       link: 
       
-    - title: "[W2] GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
+    - title: "[W3] GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
       authors: Minyoung Choe*, Juho Jung*, Kushagra Agarwal* and Nivedhitha Dhanasekaran* (* indicates the co-first authors)
       conference: IJCAI 2024 Workshop 
       link: 
