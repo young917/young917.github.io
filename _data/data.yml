@@ -210,6 +210,11 @@ publication:
   description: |
   
   items:
+    - title: "[C7] Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs"
+      authors: Minyoung Choe, Jihoon Ko, Taehyung Kwon, Kijung Shin, and Christos Faloutsos
+      conference: WWW 2025
+      link: 
+      
     - title: "[W4] Graphlets over Time: A New Lens for Temporal Network Analysis"
       authors: Deukryeol Yoon, Dongjin Lee, Minyoung Choe, Kijung Shin
       conference: ECML/PKDD 2024 Workshop
