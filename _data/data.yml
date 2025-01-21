@@ -211,7 +211,7 @@ publication:
   
   items:
     - title: "[C7] Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs"
-      authors: Minyoung Choe, Jihoon Ko, Taehyung Kwon, Kijung Shin, and Christos Faloutsos
+      authors: <b>Minyoung Choe</b>, Jihoon Ko, Taehyung Kwon, Kijung Shin, and Christos Faloutsos
       conference: WWW 2025
       link: 
       
