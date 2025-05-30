@@ -210,6 +210,11 @@ publication:
   description: |
   
   items:
+    - title: "[C8] SkySearch: Satellite Video Search at Scale"
+      authors: <b>Minyoung Choe*</b>, Geon Lee*, Changhun Han*, Suji Kim, Woong Hu, Hyebeen Hwang, Geunseok Park, Byeongyeon Kim, Hyesook Lee, Ha-Myung Park, and Kijung Shin
+      conference: KDD 2025 (Industry Paper)
+      link:
+      
     - title: "[C7] Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs"
       authors: <b>Minyoung Choe</b>, Jihoon Ko, Taehyung Kwon, Kijung Shin, and Christos Faloutsos
       conference: WWW 2025
