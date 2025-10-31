@@ -92,6 +92,15 @@ experience:
   description: |
     
   items:
+    - company: NEC Laboratories America
+      link:
+      tags:
+      date: 2025.06 - 2025.09
+      role: DSSS Research Intern
+      location: Princeton, NJ, USA
+      description: |
+        + Conducted research on vision-interpretable time series forecasting.  
+        + Designed an autonomous agent system to automate experimental design and analysis.
   
     - company: Carnegie Mellon University
       link: 
@@ -210,20 +219,30 @@ publication:
   description: |
   
   items:
+    - title: "[C10] Identifying Group Anchors in Real-World Group Interactions Under Label Scarcity"
+      authors: Fanchen Bu, Geon Lee, <b>Minyoung Choe</b>, and Kijung Shin
+      conference: ICDM 2025
+      link: https://arxiv.org/pdf/2509.20762?
+      
+    - title: "[C9] Attributed Hypergraph Generation with Realistic Interplay Between Structure and Attributes"
+      authors: Jaewan Chun*, Seokbum Yoon*, <b>Minyoung Choe</b>, Geon Lee, and Kijung Shin
+      conference: ICDM 2025 (Best Paper Award)
+      link: https://arxiv.org/pdf/2509.21838
+      
     - title: "[C8] SkySearch: Satellite Video Search at Scale"
       authors: <b>Minyoung Choe*</b>, Geon Lee*, Changhun Han*, Suji Kim, Woong Hu, Hyebeen Hwang, Geunseok Park, Byeongyeon Kim, Hyesook Lee, Ha-Myung Park, and Kijung Shin
       conference: KDD 2025 (Industry Paper)
-      link:
+      link: https://dl.acm.org/doi/pdf/10.1145/3711896.3737263
       
     - title: "[C7] Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs"
       authors: <b>Minyoung Choe</b>, Jihoon Ko, Taehyung Kwon, Kijung Shin, and Christos Faloutsos
       conference: WWW 2025
-      link: 
+      link: https://dl.acm.org/doi/pdf/10.1145/3696410.3714893
       
     - title: "[W4] Graphlets over Time: A New Lens for Temporal Network Analysis"
       authors: Deukryeol Yoon, Dongjin Lee, <b>Minyoung Choe</b>, Kijung Shin
       conference: ECML/PKDD 2024 Workshop
-      link: 
+      link: https://arxiv.org/pdf/2301.00310
       
     - title: "[W3] GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records"
       authors: <b>Minyoung Choe*</b>, Juho Jung*, Kushagra Agarwal* and Nivedhitha Dhanasekaran* (* indicates the co-first authors)
@@ -233,12 +252,12 @@ publication:
     - title: "[J1] Representative and Back-In-Time Sampling from Real-world Hypergraphs"
       authors: <b>Minyoung Choe</b>, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, Kijung Shin
       conference: ACM Transactions on Knowledge Discovery from Data 2024
-      link: 
+      link: https://dl.acm.org/doi/pdf/10.1145/3653306
       
     - title: "[W2] Temporal Graph Networks for Graph Anomaly Detection in Financial Networks"
       authors: Yejin Kim*, Youngbin Lee*, <b>Minyoung Choe</b>, Sungju Oh, Yongjae Lee (* indicates the co-first authors)
       conference: AAAI 2024 Workshop 
-      link: 
+      link: https://arxiv.org/pdf/2404.00060
       
     - title: "[C6] Classification of Edge-dependent Labels of Nodes in Hypergraphs"
       authors: <b>Minyoung Choe</b>, Sunwoo Kim, Jaemin Yoo, and Kijung Shin
@@ -248,27 +267,27 @@ publication:
     - title: "[C5] How Transitive Are Real-World Group Interactions? - Measurement and Reproduction"
       authors: Sunwoo Kim, Fanchen Bu, <b>Minyoung Choe</b>, Jaemin Yoo, and Kijung Shin
       conference: ACM KDD 2023 
-      link:
+      link: https://arxiv.org/pdf/2306.02358
       
     - title: "[C4] Reciprocity in Directed Hypergraphs: Measures, Findings, and Generators"
       authors: Sunwoo Kim, <b>Minyoung Choe</b>, Jaemin Yoo, and Kijung Shin
       conference: IEEE ICDM 2022
-      link:
+      link: https://arxiv.org/pdf/2210.05328
       
     - title: "[C3] HashNWalk: Hash and Random Walk Based Anomaly Detection in Hyperedge Streams"
       authors: Geon Lee, <b>Minyoung Choe</b>, and Kijung Shin
       conference: IJCAI 2022
-      link:
+      link: https://arxiv.org/pdf/2204.13822
       
     - title: "[C2] MiDaS: Representative Sampling from Real-world Hypergraphs"
       authors: <b>Minyoung Choe</b>, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, and Kijung Shin
       conference: WWW 2022
-      link:
+      link: https://arxiv.org/pdf/2202.01587
       
     - title: "[C1] How Do Hyperedges Overlap in Real-World Hypergraphs? - Patterns, Measures, and Generators"
       authors: Geon Lee*, <b>Minyoung Choe*</b>, and Kijung Shin (* indicates the co-first authors)
       conference: WWW 2021
-      link:
+      link: https://arxiv.org/pdf/2101.07480
       
     - title: "[W1] Pretraining Neural Architecture Search Controllers with Locality-based Self-Supervised Learning"
       authors: Kwanghee Choi*, <b>Minyoung Choe*</b>, Hyelee Lee* (* indicates the co-first authors)
