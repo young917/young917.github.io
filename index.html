@@ -39,6 +39,24 @@
     }
 
     ::selection { background: var(--accent-l); }
+
+    /* ── TEXT WRAPPING ── */
+    p, li, .pub-t, .pub-a, .exp-bullets li,
+    .news-body, .svc-v, .award-nm, .edu-degree, .edu-detail {
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+    }
+
+    /* fluid containers */
+    .pub-item, .exp-item, .edu-item,
+    .news-item, .svc-item, .award-item {
+      min-width: 0;
+    }
+    .pub-item > *, .exp-item > *,
+    .news-item > *, .svc-item > * {
+      min-width: 0;
+    }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -123,7 +141,7 @@
     .s-nav a.on { color: var(--accent); font-weight: 400; }
 
     /* ── MAIN ── */
-    main { padding: clamp(32px, 4vw, 52px) clamp(24px, 5vw, 76px) 120px clamp(28px, 4.5vw, 64px); max-width: 810px; }
+    main { padding: clamp(32px, 4vw, 52px) clamp(24px, 5vw, 76px) 120px clamp(28px, 4.5vw, 64px); max-width: min(810px, 100%); }
     section { margin-bottom: 60px; }
 
     /* ── SECTION HEADING ──
