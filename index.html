@@ -6,15 +6,23 @@
   <title>Minyoung Choe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fafaf7;
-      --text: #1a1a18;
-      --muted: #6b6b62;
-      --accent: #2b4eff;
-      --border: #e2e2da;
-      --surface: #f3f3ef;
+      --bg:      #ffffff;
+      --surface: #f7f7f5;
+      --text:    #181814;
+      --mid:     #3d3d38;
+      --muted:   #909088;
+      --faint:   #c8c8c0;
+      --accent:  #1a38a0;
+      --accent-l:#eef1fc;
+      --gold:    #7a5c14;
+      --gold-bg: #fdf5e0;
+      --gold-bd: #e8d49a;
+      --green:   #1a6640;
+      --green-bg:#eef8f2;
+      --green-bd:#b0dfc0;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,17 +33,19 @@
       color: var(--text);
       font-family: 'IBM Plex Sans', sans-serif;
       font-weight: 300;
-      font-size: 15px;
+      font-size: 14.5px;
       line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
+    ::selection { background: var(--accent-l); }
     a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
     /* ── LAYOUT ── */
     .page {
       display: grid;
-      grid-template-columns: 240px 1fr;
+      grid-template-columns: 224px 1fr;
       min-height: 100vh;
     }
 
@@ -44,243 +54,289 @@
       position: sticky;
       top: 0;
       height: 100vh;
-      padding: 56px 32px 48px;
-      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      padding: 52px 28px 44px 32px;
+      border-right: 1px solid #ebebea;
       display: flex;
       flex-direction: column;
-      overflow-y: auto;
     }
 
-    .name {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.45rem;
-      font-weight: 500;
-      line-height: 1.2;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-    .position {
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 28px;
-    }
-
-    .avatar-wrap {
-      width: 84px;
-      height: 84px;
+    .s-photo {
+      width: 68px; height: 68px;
       border-radius: 50%;
       background: var(--surface);
-      border: 1px solid var(--border);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'EB Garamond', serif;
-      font-size: 2rem;
+      border: 1px solid #e4e4e0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.2rem;
       color: var(--muted);
-      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      flex-shrink: 0;
     }
+    .s-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .s-pos {
+      font-size: 0.73rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .s-sep { width: 22px; height: 1px; background: #e4e4e0; margin: 20px 0; }
 
-    .sidebar-section { margin-top: 28px; }
-    .sidebar-label {
+    .s-lbl {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.12em;
+      font-size: 0.59rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-    .sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-    .sidebar-links a {
-      font-size: 0.82rem;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .sidebar-links a:hover { color: var(--accent); text-decoration: none; }
-    .icon { width: 16px; color: var(--muted); font-style: normal; font-size: 0.9rem; }
-
-    nav { margin-top: auto; padding-top: 28px; }
-    .nav-links { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-    .nav-links a {
-      font-size: 0.82rem;
-      color: var(--muted);
-      display: block;
-      padding: 4px 0;
+    .s-links { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 18px; }
+    .s-links a {
+      font-size: 0.77rem;
+      font-weight: 300;
+      color: var(--mid);
+      display: flex; align-items: baseline; gap: 7px;
       transition: color 0.15s;
     }
-    .nav-links a:hover { color: var(--accent); text-decoration: none; }
-    .nav-links a.active { color: var(--text); font-weight: 500; }
+    .s-links a:hover { color: var(--accent); text-decoration: none; }
+    .s-links .ico { font-size: 0.68rem; color: var(--muted); width: 10px; }
+
+    .s-nav { margin-top: auto; padding-top: 20px; border-top: 1px solid #ebebea; }
+    .s-nav ul { list-style: none; display: flex; flex-direction: column; }
+    .s-nav a {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--muted);
+      display: block;
+      padding: 3.5px 0;
+      transition: color 0.15s;
+    }
+    .s-nav a:hover { color: var(--text); text-decoration: none; }
+    .s-nav a.on { color: var(--accent); font-weight: 400; }
 
     /* ── MAIN ── */
-    main { padding: 56px 72px 120px; max-width: 840px; }
-    section { margin-bottom: 72px; }
+    main { padding: 52px 76px 120px 64px; max-width: 810px; }
+    section { margin-bottom: 60px; }
 
-    .section-title {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      border-bottom: 1px solid var(--border);
+    /* ── SECTION HEADING ──
+       One thin rule, only here. Nowhere else. */
+    .sh {
+      display: flex; align-items: center; gap: 12px;
+      border-bottom: 1px solid #e4e4e0;
       padding-bottom: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+    }
+    .sh-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       color: var(--text);
+      white-space: nowrap;
     }
 
-    /* ── BIO ── */
-    .bio-text {
-      font-size: 0.95rem;
-      color: #2e2e28;
-      line-height: 1.85;
-      margin-bottom: 14px;
-    }
-    .bio-text strong { font-weight: 500; color: var(--text); }
+    /* ── ABOUT ── */
+    #about p { font-size: 0.93rem; line-height: 1.88; color: var(--mid); margin-bottom: 12px; }
+    #about p:last-child { margin-bottom: 0; }
+    #about strong { font-weight: 500; color: var(--text); }
+    #about em { font-style: italic; }
 
     /* ── NEWS ── */
-    .news-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .news-item {
       display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 16px;
-      font-size: 0.85rem;
-      line-height: 1.6;
+      grid-template-columns: 94px 1fr;
+      gap: 0 16px;
+      padding: 5px 0;
+      align-items: baseline;
     }
-    .news-date {
+    .news-dt {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.67rem;
       color: var(--muted);
-      padding-top: 2px;
+      letter-spacing: 0.01em;
     }
-    .badge {
+    .news-body { font-size: 0.84rem; color: var(--mid); line-height: 1.6; }
+    .news-body strong { font-weight: 500; color: var(--text); }
+    .news-body em { font-style: italic; }
+
+    .pill {
       display: inline-block;
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.62rem;
-      padding: 1px 6px;
-      border-radius: 3px;
+      font-size: 0.57rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 1px 5px;
+      border-radius: 2px;
       vertical-align: middle;
       margin-left: 4px;
-      letter-spacing: 0.04em;
     }
-    .badge-award { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-    .badge-pub   { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
-    .badge-new   { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .pill-award { background: var(--gold-bg);  color: var(--gold);   border: 1px solid var(--gold-bd); }
+    .pill-pub   { background: var(--accent-l); color: var(--accent); border: 1px solid #c8d5f7; }
+    .pill-new   { background: var(--green-bg); color: var(--green);  border: 1px solid var(--green-bd); }
 
     /* ── PUBLICATIONS ── */
-    .pub-year-group { margin-bottom: 32px; }
-    .pub-year-label {
+    .pub-meta {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.67rem;
       color: var(--muted);
-      letter-spacing: 0.08em;
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
-    .pub-entry {
-      padding: 14px 0;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+    .pub-yr {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.78rem;
+      color: var(--faint);
+      letter-spacing: 0.06em;
+      margin: 24px 0 10px;
     }
-    .pub-entry:last-child { border-bottom: 1px solid var(--border); }
-    .pub-title-text {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.02rem;
-      color: var(--text);
+    .pub-yr:first-of-type { margin-top: 0; }
+    .pub-item {
+      padding: 10px 0 10px 14px;
+      position: relative;
+      margin-bottom: 2px;
+    }
+    .pub-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 16px;
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--faint);
+      transition: background 0.2s;
+    }
+    .pub-item:hover::before { background: var(--accent); }
+    .pub-t {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.94rem;
+      font-weight: 400;
       line-height: 1.45;
-      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 3px;
     }
-    .pub-authors {
-      font-size: 0.82rem;
+    .pub-a {
+      font-size: 0.78rem;
+      font-weight: 300;
       color: var(--muted);
       line-height: 1.5;
+      margin-bottom: 4px;
     }
-    .pub-authors .me {
-      color: var(--text);
+    .pub-a .me {
+      color: var(--mid);
       text-decoration: underline;
       text-underline-offset: 2px;
+      text-decoration-color: var(--faint);
     }
-    .pub-venue {
+    .pub-v {
+      display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.67rem;
       color: var(--accent);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
     }
-    .pub-award {
+    .award-tag {
       font-family: 'IBM Plex Sans', sans-serif;
-      font-size: 0.72rem;
-      color: #92400e;
-      background: #fef3c7;
-      border: 1px solid #fde68a;
-      padding: 1px 8px;
-      border-radius: 3px;
+      font-size: 0.67rem;
+      font-weight: 400;
+      color: var(--gold);
+      background: var(--gold-bg);
+      border: 1px solid var(--gold-bd);
+      padding: 1px 6px;
+      border-radius: 2px;
     }
 
     /* ── EXPERIENCE ── */
-    .exp-entry {
-      padding: 20px 0;
-      border-top: 1px solid var(--border);
+    .exp-item {
       display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 24px;
+      grid-template-columns: 132px 1fr;
+      gap: 0 22px;
+      padding: 16px 0;
     }
-    .exp-entry:last-child { border-bottom: 1px solid var(--border); }
+    .exp-item + .exp-item { border-top: 1px solid #f0f0ec; }
+
+    .exp-left { padding-top: 2px; }
     .exp-period {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.66rem;
       color: var(--muted);
-      line-height: 1.5;
-      padding-top: 3px;
+      line-height: 1.6;
+      margin-bottom: 5px;
     }
-    .exp-org { font-weight: 500; font-size: 0.92rem; color: var(--text); margin-bottom: 2px; }
-    .exp-role { font-size: 0.82rem; color: var(--muted); font-style: italic; margin-bottom: 10px; }
-    .exp-desc { font-size: 0.83rem; color: #4a4a44; line-height: 1.7; }
-    .exp-desc li { margin-left: 16px; margin-bottom: 4px; }
+    .exp-type {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.57rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 2px 5px;
+      border-radius: 2px;
+    }
+    .exp-type.intern  { color: var(--green); border: 1px solid var(--green-bd); background: var(--green-bg); }
+    .exp-type.visit   { color: var(--accent); border: 1px solid #c8d5f7; background: var(--accent-l); }
+    .exp-type.project { color: #5a3a00; border: 1px solid #e0c87a; background: #fdf7e4; }
+
+    .exp-org  { font-weight: 500; font-size: 0.89rem; color: var(--text); margin-bottom: 1px; }
+    .exp-role { font-size: 0.79rem; font-weight: 300; font-style: italic; color: var(--muted); margin-bottom: 8px; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .exp-bullets li {
+      font-size: 0.81rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.65;
+      padding-left: 12px;
+      position: relative;
+    }
+    .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--faint); }
 
     /* ── EDUCATION ── */
-    .edu-entry {
-      padding: 20px 0;
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 24px;
-    }
-    .edu-entry:last-child { border-bottom: 1px solid var(--border); }
-    .edu-period { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--muted); padding-top: 3px; }
-    .edu-school { font-weight: 500; font-size: 0.92rem; color: var(--text); margin-bottom: 2px; }
-    .edu-degree { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
-    .edu-note { font-size: 0.8rem; color: var(--muted); }
+    .edu-item { padding: 14px 0; }
+    .edu-item + .edu-item { border-top: 1px solid #f0f0ec; }
+    .edu-school { font-weight: 500; font-size: 0.89rem; color: var(--text); margin-bottom: 1px; }
+    .edu-degree { font-size: 0.82rem; font-weight: 300; color: var(--mid); margin-bottom: 4px; }
+    .edu-detail { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; color: var(--muted); line-height: 1.6; }
 
     /* ── SERVICE ── */
-    .service-entry {
-      padding: 12px 0;
-      border-top: 1px solid var(--border);
+    .svc-item {
       display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 24px;
-      font-size: 0.85rem;
+      grid-template-columns: 90px 1fr;
+      gap: 0 16px;
+      padding: 5px 0;
+      align-items: baseline;
     }
-    .service-entry:last-child { border-bottom: 1px solid var(--border); }
-    .service-role { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; padding-top: 2px; }
-    .service-desc { color: var(--text); line-height: 1.6; }
+    .svc-k {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.63rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .svc-v { font-size: 0.83rem; font-weight: 300; color: var(--mid); line-height: 1.6; }
+    .svc-v strong { font-weight: 500; color: var(--text); }
+
+    /* ── AWARDS ── */
+    .award-item {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 0 16px;
+      padding: 5px 0;
+      align-items: baseline;
+    }
+    .award-yr { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; color: var(--muted); }
+    .award-nm { font-size: 0.83rem; font-weight: 300; color: var(--mid); line-height: 1.6; }
+    .award-nm strong { font-weight: 500; color: var(--text); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 860px) {
+    @media (max-width: 840px) {
       .page { grid-template-columns: 1fr; }
-      aside {
-        position: relative; height: auto;
-        padding: 32px 24px 24px;
-        border-right: none; border-bottom: 1px solid var(--border);
-      }
-      .avatar-wrap { display: none; }
-      nav { margin-top: 20px; padding-top: 20px; }
-      .nav-links { flex-direction: row; flex-wrap: wrap; gap: 8px 20px; }
+      aside { position: relative; height: auto; padding: 32px 24px 20px; border-right: none; border-bottom: 1px solid #ebebea; }
+      .s-nav { margin-top: 16px; }
+      .s-nav ul { flex-direction: row; flex-wrap: wrap; gap: 2px 16px; }
       main { padding: 32px 24px 80px; }
-      .exp-entry, .edu-entry, .service-entry, .news-item { grid-template-columns: 1fr; gap: 4px; }
+      .exp-item { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -289,299 +345,288 @@
 
   <!-- SIDEBAR -->
   <aside>
-    <div class="avatar-wrap">MC</div>
-    <div class="name">Minyoung Choe</div>
-    <div class="position">
-      Ph.D. Candidate<br>
-      Graduate School of AI<br>
-      KAIST
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Contact</div>
-      <ul class="sidebar-links">
-        <li><a href="mailto:minyoung.choe@kaist.ac.kr"><i class="icon">✉</i>Email</a></li>
-        <li><a href="https://github.com/young917" target="_blank"><i class="icon">⌥</i>GitHub</a></li>
-        <li><a href="tel:+821072127482"><i class="icon">☎</i>+82-10-7212-7482</a></li>
-      </ul>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-label">Advisor</div>
-      <ul class="sidebar-links">
-        <li><a href="#">Prof. Kijung Shin</a></li>
-      </ul>
-    </div>
-
-    <nav>
-      <ul class="nav-links">
+    <div class="s-photo">MC</div>
+    <div class="s-name">Minyoung Choe</div>
+    <div class="s-pos">Ph.D. Candidate<br>Graduate School of AI<br>KAIST, Seoul</div>
+    <div class="s-sep"></div>
+    <div class="s-lbl">Contact</div>
+    <ul class="s-links">
+      <li><a href="mailto:minyoung.choe@kaist.ac.kr"><span class="ico">✉</span>minyoung.choe@kaist.ac.kr</a></li>
+      <li><a href="https://github.com/young917" target="_blank"><span class="ico">↗</span>github.com/young917</a></li>
+      <li><a href="tel:+821072127482"><span class="ico">○</span>+82-10-7212-7482</a></li>
+    </ul>
+    <div class="s-lbl">Advisor</div>
+    <ul class="s-links">
+      <li><a href="#"><span class="ico"></span>Prof. Kijung Shin</a></li>
+    </ul>
+    <div class="s-nav">
+      <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#news">News</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#service">Service &amp; Awards</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#awards">Awards</a></li>
       </ul>
-    </nav>
+    </div>
   </aside>
 
   <!-- MAIN -->
   <main>
 
+    <!-- ABOUT -->
     <section id="about">
-      <p class="bio-text">
-        I am a Ph.D. candidate in the <strong>Graduate School of Artificial Intelligence at KAIST</strong>, advised by <a href="#">Prof. Kijung Shin</a>. I am broadly interested in <strong>graph mining and machine learning on graphs</strong>, with a particular focus on <strong>higher-order networks (hypergraphs)</strong> — a powerful abstraction for modeling real-world group interactions that go beyond pairwise relations.
-      </p>
-      <p class="bio-text">
-        My work spans scalable generative models (<em>HyRec, MiDaS, Kronecker models</em>), hypergraph neural networks (<em>WHATsNET</em>), and LLM-integrated inference systems, aiming to make higher-order network analysis both theoretically principled and practically deployable. I have published at <strong>KDD, WWW, ICDM, IJCAI,</strong> and <strong>TKDD</strong>, and received the <strong>Best Paper Award at ICDM 2025</strong>.
-      </p>
-      <p class="bio-text">
-        I have interned at <strong>NEC Laboratories America</strong> and conducted a visiting research stay at <strong>Carnegie Mellon University</strong> with Prof. Christos Faloutsos. I am currently collaborating with <strong>Samsung</strong> on early-stage R&amp;D automation.
-      </p>
+      <p>I am a Ph.D. candidate in the <strong>Graduate School of Artificial Intelligence at KAIST</strong>, advised by <a href="#">Prof. Kijung Shin</a>. My research focuses on <strong>graph mining</strong> and <strong>machine learning on graphs</strong>, with a particular interest in <strong>higher-order networks (hypergraphs)</strong> — structures that capture group interactions beyond pairwise relations.</p>
+      <p>My work spans scalable generative models (<em>HyRec, MiDaS, Kronecker models</em>), hypergraph neural networks (<em>WHATsNET</em>), and LLM-integrated inference systems. I have published at <strong>KDD, WWW, ICDM, IJCAI,</strong> and <strong>TKDD</strong>, and received the <strong>Best Paper Award at IEEE ICDM 2025</strong>.</p>
     </section>
 
+    <!-- NEWS -->
     <section id="news">
-      <h2 class="section-title">News</h2>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date">Jan 2026</span>
-          <span>Started industry collaboration with Samsung on R&amp;D process automation using LLMs and scientific knowledge extraction. <span class="badge badge-new">New</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Dec 2025</span>
-          <span>Received <strong>Best Paper Award</strong> at IEEE ICDM 2025 for <em>Attributed Hypergraph Generation with Realistic Interplay Between Structure and Attributes</em>. <span class="badge badge-award">🏆 Award</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Jun 2025</span>
-          <span><em>SkySearch: Satellite Video Search at Scale</em> accepted at <strong>KDD 2025</strong> (Industry Track, co-first author). <span class="badge badge-pub">KDD</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Jun 2025</span>
-          <span>Co-organized the PAKDD 2025 Workshop on Graph Learning with Foundation Models (GLFM), Sydney, Australia.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Jun–Sep 2025</span>
-          <span>Research intern at <strong>NEC Laboratories America</strong> (Data Science &amp; System Security), Princeton, NJ.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Jan 2025</span>
-          <span><em>Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs</em> accepted at <strong>WWW 2025</strong>. <span class="badge badge-pub">WWW</span></span>
-        </li>
-      </ul>
+      <div class="sh"><span class="sh-title">News</span></div>
+      <div class="news-item">
+        <span class="news-dt">Jan 2026</span>
+        <span class="news-body">Started joint research project with <strong>Samsung</strong> on R&amp;D process automation via LLMs and scientific knowledge extraction.<span class="pill pill-new">New</span></span>
+      </div>
+      <div class="news-item">
+        <span class="news-dt">Dec 2025</span>
+        <span class="news-body"><strong>Best Paper Award</strong> at <strong>IEEE ICDM 2025</strong> — <em>Attributed Hypergraph Generation with Realistic Interplay Between Structure and Attributes</em>.<span class="pill pill-award">🏆 Award</span></span>
+      </div>
+      <div class="news-item">
+        <span class="news-dt">Jun 2025</span>
+        <span class="news-body"><em>SkySearch: Satellite Video Search at Scale</em> accepted at <strong>KDD 2025</strong> Industry Track (co-first author).<span class="pill pill-pub">KDD</span></span>
+      </div>
+      <div class="news-item">
+        <span class="news-dt">Jun 2025</span>
+        <span class="news-body">Co-organized <strong>PAKDD 2025 Workshop on Graph Learning with Foundation Models</strong> (GLFM), Sydney.</span>
+      </div>
+      <div class="news-item">
+        <span class="news-dt">Jun–Sep 2025</span>
+        <span class="news-body">Research intern at <strong>NEC Laboratories America</strong>, Princeton, NJ.</span>
+      </div>
+      <div class="news-item">
+        <span class="news-dt">Jan 2025</span>
+        <span class="news-body"><em>Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs</em> accepted at <strong>WWW 2025</strong>.<span class="pill pill-pub">WWW</span></span>
+      </div>
     </section>
 
+    <!-- PUBLICATIONS -->
     <section id="publications">
-      <h2 class="section-title">Publications</h2>
-      <p style="font-size:0.8rem;color:var(--muted);margin-bottom:24px;">* denotes equal contribution. <u>Underline</u> denotes Minyoung Choe.</p>
+      <div class="sh"><span class="sh-title">Publications</span></div>
+      <div class="pub-meta">* equal contribution &nbsp;·&nbsp; underline denotes Minyoung Choe</div>
 
-      <div class="pub-year-group">
-        <div class="pub-year-label">2025</div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Attributed Hypergraph Generation with Realistic Interplay Between Structure and Attributes</div>
-          <div class="pub-authors">Jaewan Chun*, Seokbum Yoon*, <span class="me">Minyoung Choe</span>, Geon Lee, and Kijung Shin</div>
-          <div class="pub-venue">IEEE ICDM 2025 <span class="pub-award">🏆 Best Paper Award</span></div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">SkySearch: Satellite Video Search at Scale</div>
-          <div class="pub-authors"><span class="me">Minyoung Choe</span>*, Geon Lee*, Changhun Han*, Suji Kim, Woong Hu, Hyebeen Hwang, Geunseok Park, Byeongyeon Kim, Hyesook Lee, Ha-Myung Park, and Kijung Shin</div>
-          <div class="pub-venue">ACM KDD 2025 (Industry Track)</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs</div>
-          <div class="pub-authors"><span class="me">Minyoung Choe</span>, Jihoon Ko, Taehyung Kwon, Kijung Shin, and Christos Faloutsos</div>
-          <div class="pub-venue">The Web Conference (WWW) 2025</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Identifying Group Anchors in Real-World Group Interactions Under Label Scarcity</div>
-          <div class="pub-authors">Fanchen Bu, Geon Lee, Minyoung Choe, and Kijung Shin</div>
-          <div class="pub-venue">IEEE ICDM 2025</div>
-        </div>
+      <div class="pub-yr">2025</div>
+      <div class="pub-item">
+        <div class="pub-t">Attributed Hypergraph Generation with Realistic Interplay Between Structure and Attributes</div>
+        <div class="pub-a">Jaewan Chun*, Seokbum Yoon*, <span class="me">Minyoung Choe</span>, Geon Lee, Kijung Shin</div>
+        <div class="pub-v">IEEE ICDM 2025 <span class="award-tag">🏆 Best Paper Award</span></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">SkySearch: Satellite Video Search at Scale</div>
+        <div class="pub-a"><span class="me">Minyoung Choe</span>*, Geon Lee*, Changhun Han*, Suji Kim, Woong Hu, Hyebeen Hwang, Geunseok Park, Byeongyeon Kim, Hyesook Lee, Ha-Myung Park, Kijung Shin</div>
+        <div class="pub-v">ACM KDD 2025 · Industry Track</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">Kronecker Generative Models for Power-Law Patterns in Real-World Hypergraphs</div>
+        <div class="pub-a"><span class="me">Minyoung Choe</span>, Jihoon Ko, Taehyung Kwon, Kijung Shin, Christos Faloutsos</div>
+        <div class="pub-v">The Web Conference (WWW) 2025</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">Identifying Group Anchors in Real-World Group Interactions Under Label Scarcity</div>
+        <div class="pub-a">Fanchen Bu, Geon Lee, Minyoung Choe, Kijung Shin</div>
+        <div class="pub-v">IEEE ICDM 2025</div>
       </div>
 
-      <div class="pub-year-group">
-        <div class="pub-year-label">2024</div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Representative and Back-In-Time Sampling from Real-world Hypergraphs</div>
-          <div class="pub-authors"><span class="me">Minyoung Choe</span>, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, Kijung Shin</div>
-          <div class="pub-venue">ACM Transactions on Knowledge Discovery from Data (TKDD), 2024</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records</div>
-          <div class="pub-authors"><span class="me">Minyoung Choe</span>*, Juho Jung*, Kushagra Agarwal*, Nivedhitha Dhanasekaran*</div>
-          <div class="pub-venue">IJCAI 2024 Workshop</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Graphlets over Time: A New Lens for Temporal Network Analysis</div>
-          <div class="pub-authors">Deukryeol Yoon, Dongjin Lee, Minyoung Choe, Kijung Shin</div>
-          <div class="pub-venue">ECML/PKDD 2024 Workshop</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Temporal Graph Networks for Graph Anomaly Detection in Financial Networks</div>
-          <div class="pub-authors">Yejin Kim*, Youngbin Lee*, Minyoung Choe, Sungju Oh, Yongjae Lee</div>
-          <div class="pub-venue">AAAI 2024 Workshop</div>
-        </div>
+      <div class="pub-yr">2024</div>
+      <div class="pub-item">
+        <div class="pub-t">Representative and Back-In-Time Sampling from Real-world Hypergraphs</div>
+        <div class="pub-a"><span class="me">Minyoung Choe</span>, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, Kijung Shin</div>
+        <div class="pub-v">ACM Transactions on Knowledge Discovery from Data (TKDD), 2024</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">GraphEHR: Heterogeneous Graph Neural Network for Electronic Health Records</div>
+        <div class="pub-a"><span class="me">Minyoung Choe</span>*, Juho Jung*, Kushagra Agarwal*, Nivedhitha Dhanasekaran*</div>
+        <div class="pub-v">IJCAI 2024 Workshop</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">Graphlets over Time: A New Lens for Temporal Network Analysis</div>
+        <div class="pub-a">Deukryeol Yoon, Dongjin Lee, Minyoung Choe, Kijung Shin</div>
+        <div class="pub-v">ECML/PKDD 2024 Workshop</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">Temporal Graph Networks for Graph Anomaly Detection in Financial Networks</div>
+        <div class="pub-a">Yejin Kim*, Youngbin Lee*, Minyoung Choe, Sungju Oh, Yongjae Lee</div>
+        <div class="pub-v">AAAI 2024 Workshop</div>
       </div>
 
-      <div class="pub-year-group">
-        <div class="pub-year-label">2023</div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Classification of Edge-dependent Labels of Nodes in Hypergraphs</div>
-          <div class="pub-authors"><span class="me">Minyoung Choe</span>, Sunwoo Kim, Jaemin Yoo, and Kijung Shin</div>
-          <div class="pub-venue">ACM KDD 2023</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">How Transitive Are Real-World Group Interactions? — Measurement and Reproduction</div>
-          <div class="pub-authors">Sunwoo Kim, Fanchen Bu, Minyoung Choe, Jaemin Yoo, and Kijung Shin</div>
-          <div class="pub-venue">ACM KDD 2023</div>
-        </div>
+      <div class="pub-yr">2023</div>
+      <div class="pub-item">
+        <div class="pub-t">Classification of Edge-dependent Labels of Nodes in Hypergraphs</div>
+        <div class="pub-a"><span class="me">Minyoung Choe</span>, Sunwoo Kim, Jaemin Yoo, Kijung Shin</div>
+        <div class="pub-v">ACM KDD 2023</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">How Transitive Are Real-World Group Interactions? — Measurement and Reproduction</div>
+        <div class="pub-a">Sunwoo Kim, Fanchen Bu, Minyoung Choe, Jaemin Yoo, Kijung Shin</div>
+        <div class="pub-v">ACM KDD 2023</div>
       </div>
 
-      <div class="pub-year-group">
-        <div class="pub-year-label">2022</div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Reciprocity in Directed Hypergraphs: Measures, Findings, and Generators</div>
-          <div class="pub-authors">Sunwoo Kim, Minyoung Choe, Jaemin Yoo, and Kijung Shin</div>
-          <div class="pub-venue">IEEE ICDM 2022</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">HashNWalk: Hash and Random Walk Based Anomaly Detection in Hyperedge Streams</div>
-          <div class="pub-authors">Geon Lee, Minyoung Choe, and Kijung Shin</div>
-          <div class="pub-venue">IJCAI 2022</div>
-        </div>
-        <div class="pub-entry">
-          <div class="pub-title-text">MiDaS: Representative Sampling from Real-world Hypergraphs</div>
-          <div class="pub-authors"><span class="me">Minyoung Choe</span>, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, and Kijung Shin</div>
-          <div class="pub-venue">The Web Conference (WWW) 2022</div>
-        </div>
+      <div class="pub-yr">2022</div>
+      <div class="pub-item">
+        <div class="pub-t">Reciprocity in Directed Hypergraphs: Measures, Findings, and Generators</div>
+        <div class="pub-a">Sunwoo Kim, Minyoung Choe, Jaemin Yoo, Kijung Shin</div>
+        <div class="pub-v">IEEE ICDM 2022</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">HashNWalk: Hash and Random Walk Based Anomaly Detection in Hyperedge Streams</div>
+        <div class="pub-a">Geon Lee, Minyoung Choe, Kijung Shin</div>
+        <div class="pub-v">IJCAI 2022</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-t">MiDaS: Representative Sampling from Real-world Hypergraphs</div>
+        <div class="pub-a"><span class="me">Minyoung Choe</span>, Jaemin Yoo, Geon Lee, Woonsung Baek, U Kang, Kijung Shin</div>
+        <div class="pub-v">The Web Conference (WWW) 2022</div>
       </div>
 
-      <div class="pub-year-group">
-        <div class="pub-year-label">2021</div>
-        <div class="pub-entry">
-          <div class="pub-title-text">How Do Hyperedges Overlap in Real-World Hypergraphs? — Patterns, Measures, and Generators</div>
-          <div class="pub-authors">Geon Lee*, <span class="me">Minyoung Choe</span>*, and Kijung Shin</div>
-          <div class="pub-venue">The Web Conference (WWW) 2021</div>
-        </div>
+      <div class="pub-yr">2021</div>
+      <div class="pub-item">
+        <div class="pub-t">How Do Hyperedges Overlap in Real-World Hypergraphs? — Patterns, Measures, and Generators</div>
+        <div class="pub-a">Geon Lee*, <span class="me">Minyoung Choe</span>*, Kijung Shin</div>
+        <div class="pub-v">The Web Conference (WWW) 2021</div>
       </div>
 
-      <div class="pub-year-group">
-        <div class="pub-year-label">2020</div>
-        <div class="pub-entry">
-          <div class="pub-title-text">Pretraining Neural Architecture Search Controllers with Locality-based Self-Supervised Learning</div>
-          <div class="pub-authors">Kwanghee Choi*, <span class="me">Minyoung Choe</span>*, Hyelee Lee*</div>
-          <div class="pub-venue">NeurIPS 2020 Workshop</div>
-        </div>
+      <div class="pub-yr">2020</div>
+      <div class="pub-item">
+        <div class="pub-t">Pretraining Neural Architecture Search Controllers with Locality-based Self-Supervised Learning</div>
+        <div class="pub-a">Kwanghee Choi*, <span class="me">Minyoung Choe</span>*, Hyelee Lee*</div>
+        <div class="pub-v">NeurIPS 2020 Workshop</div>
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
-      <h2 class="section-title">Research &amp; Industry Experience</h2>
+      <div class="sh"><span class="sh-title">Experience</span></div>
 
-      <div class="exp-entry">
-        <div class="exp-period">Jun–Sep 2025<br>Princeton, NJ</div>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-period">Jun – Sep 2025<br>Princeton, NJ</div>
+          <span class="exp-type intern">Internship</span>
+        </div>
         <div>
           <div class="exp-org">NEC Laboratories America</div>
           <div class="exp-role">Research Intern — Data Science &amp; System Security</div>
-          <ul class="exp-desc">
-            <li>Conducted research on vision-interpretable time series forecasting; benchmarked and adapted foundation models (VisionTS, Moirai) for domain-specific tasks.</li>
-            <li>Designed and implemented a multi-agent ML automation system (Planner, Retriever, Coder, Debugger) enabling end-to-end autonomous experimental workflows.</li>
+          <ul class="exp-bullets">
+            <li>Vision-interpretable time series forecasting; benchmarked VisionTS and Moirai for domain-specific tasks.</li>
+            <li>Built a multi-agent ML automation system (Planner, Retriever, Coder, Debugger) for end-to-end autonomous experimental workflows.</li>
           </ul>
         </div>
       </div>
 
-      <div class="exp-entry">
-        <div class="exp-period">Aug 2023–Feb 2024<br>Pittsburgh, PA</div>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-period">Aug 2023 –<br>Feb 2024<br>Pittsburgh, PA</div>
+          <span class="exp-type visit">Visiting</span>
+        </div>
         <div>
           <div class="exp-org">Carnegie Mellon University</div>
-          <div class="exp-role">Visiting Researcher (Host: Prof. Christos Faloutsos)</div>
-          <ul class="exp-desc">
-            <li>Collaborated on Kronecker-based generative models for hypergraphs; resulted in a WWW 2025 publication.</li>
-            <li>Selected for the IITP-funded CMU AI Concentrated Education Program — a nationally competitive overseas research fellowship.</li>
+          <div class="exp-role">Visiting Researcher · Host: Prof. Christos Faloutsos</div>
+          <ul class="exp-bullets">
+            <li>Kronecker-based generative models for hypergraphs → WWW 2025.</li>
+            <li>Selected for the IITP-funded CMU AI Concentrated Education Program.</li>
           </ul>
         </div>
       </div>
 
-      <div class="exp-entry">
-        <div class="exp-period">Jul 2021–Dec 2024</div>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-period">Jul 2021 –<br>Dec 2024</div>
+          <span class="exp-type project">Joint Project</span>
+        </div>
         <div>
           <div class="exp-org">Korea Meteorological Administration</div>
-          <div class="exp-role">AI-based Weather Forecast Support (Government Research Project)</div>
-          <ul class="exp-desc">
-            <li>Led development of SkySearch, a large-scale satellite video retrieval system covering 40 years of historical footage.</li>
-            <li>Designed convolutional embedding models and a K-NN search graph enabling real-time retrieval of analogous meteorological events — resulting in a KDD 2025 Industry Track publication.</li>
+          <div class="exp-role">AI-based Weather Forecast Support</div>
+          <ul class="exp-bullets">
+            <li>Led development of SkySearch — large-scale satellite video retrieval over 40 years of historical footage.</li>
+            <li>Convolutional embedding + K-NN search graph for real-time retrieval of analogous meteorological events → KDD 2025 Industry Track.</li>
           </ul>
         </div>
       </div>
 
-      <div class="exp-entry">
-        <div class="exp-period">Jan 2026–Present</div>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-period">Jan 2026 –<br>Present</div>
+          <span class="exp-type project">Joint Project</span>
+        </div>
         <div>
           <div class="exp-org">Samsung</div>
-          <div class="exp-role">Early R&amp;D Process Automation (Industry Collaboration)</div>
-          <ul class="exp-desc">
-            <li>Developing an end-to-end pipeline for early-stage R&amp;D discovery: scientific NER/relation extraction, multi-hop fact verification, and hypothesis correction over scientific literature.</li>
-            <li>Working on multi-document visually-rich document retrieval (ViMDoc benchmark), bridging structured scientific knowledge with LLM-based reasoning.</li>
+          <div class="exp-role">Early R&amp;D Process Automation</div>
+          <ul class="exp-bullets">
+            <li>End-to-end pipeline for R&amp;D discovery: scientific NER/RE, multi-hop fact verification, and hypothesis correction over scientific literature.</li>
+            <li>Multi-document visually-rich document retrieval (ViMDoc benchmark), bridging scientific knowledge with LLM reasoning.</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education">
-      <h2 class="section-title">Education</h2>
+      <div class="sh"><span class="sh-title">Education</span></div>
 
-      <div class="edu-entry">
-        <div class="edu-period">Mar 2021–Present<br>(Expected 2027)</div>
-        <div>
-          <div class="edu-school">Korea Advanced Institute of Science and Technology (KAIST)</div>
-          <div class="edu-degree">M.S. &amp; Ph.D. in Artificial Intelligence</div>
-          <div class="edu-note">Advisor: Prof. Kijung Shin · Seoul, South Korea</div>
-        </div>
+      <div class="edu-item">
+        <div class="edu-school">KAIST</div>
+        <div class="edu-degree">M.S. &amp; Ph.D. in Artificial Intelligence</div>
+        <div class="edu-detail">Mar 2021 – Present (Expected 2027) &nbsp;·&nbsp; Advisor: Prof. Kijung Shin &nbsp;·&nbsp; Seoul, South Korea</div>
       </div>
-
-      <div class="edu-entry">
-        <div class="edu-period">Mar 2017–Feb 2021</div>
-        <div>
-          <div class="edu-school">Sogang University</div>
-          <div class="edu-degree">B.S. in Computer Science and Engineering</div>
-          <div class="edu-note">GPA: 4.14 / 4.3 · Summa Cum Laude · Ranked 1st / 72</div>
-        </div>
+      <div class="edu-item">
+        <div class="edu-school">Sogang University</div>
+        <div class="edu-degree">B.S. in Computer Science and Engineering</div>
+        <div class="edu-detail">Mar 2017 – Feb 2021 &nbsp;·&nbsp; GPA 4.14/4.3 &nbsp;·&nbsp; Summa Cum Laude &nbsp;·&nbsp; Ranked 1<sup>st</sup>/72</div>
       </div>
     </section>
 
+    <!-- SERVICE -->
     <section id="service">
-      <h2 class="section-title">Service &amp; Awards</h2>
+      <div class="sh"><span class="sh-title">Service</span></div>
+      <div class="svc-item">
+        <span class="svc-k">Workshop</span>
+        <span class="svc-v">Co-organizer, <strong>PAKDD 2025</strong> Workshop on Graph Learning with Foundation Models (GLFM), Sydney</span>
+      </div>
+      <div class="svc-item">
+        <span class="svc-k">Reviewer</span>
+        <span class="svc-v">ACM KDD &nbsp;·&nbsp; WWW &nbsp;·&nbsp; ACM CIKM &nbsp;·&nbsp; PAKDD</span>
+      </div>
+      <div class="svc-item">
+        <span class="svc-k">Teaching</span>
+        <span class="svc-v">Data Mining and Search, KAIST (Spring 2022/23/24) &nbsp;·&nbsp; Mathematics for AI, KAIST (Fall 2022) &nbsp;·&nbsp; Computational Thinking, Sogang (Fall 2018)</span>
+      </div>
+    </section>
 
-      <div class="service-entry">
-        <div class="service-role">Workshop</div>
-        <div class="service-desc">Co-organizer, PAKDD 2025 Workshop on Graph Learning with Foundation Models (GLFM), Sydney, Australia</div>
+    <!-- AWARDS -->
+    <section id="awards">
+      <div class="sh"><span class="sh-title">Awards &amp; Honors</span></div>
+      <div class="award-item">
+        <span class="award-yr">2025</span>
+        <span class="award-nm"><strong>Best Paper Award</strong>, IEEE ICDM 2025</span>
       </div>
-      <div class="service-entry">
-        <div class="service-role">Reviewer</div>
-        <div class="service-desc">ACM KDD, The Web Conference (WWW), ACM CIKM, PAKDD</div>
+      <div class="award-item">
+        <span class="award-yr">2021</span>
+        <span class="award-nm">Student Scholarship Award, The Web Conference (WWW 2021)</span>
       </div>
-      <div class="service-entry">
-        <div class="service-role">Teaching</div>
-        <div class="service-desc">Teaching Assistant — Data Mining and Search (KAIST, Spring 2022/23/24); Mathematics for AI (KAIST, Fall 2022); Computational Thinking (Sogang, Fall 2018)</div>
+      <div class="award-item">
+        <span class="award-yr">2019</span>
+        <span class="award-nm">Grand Prize, Open-Source Software Contribution (MSIT, Korea)</span>
       </div>
-      <div class="service-entry">
-        <div class="service-role">2025</div>
-        <div class="service-desc"><strong>Best Paper Award</strong>, IEEE ICDM 2025</div>
+      <div class="award-item">
+        <span class="award-yr">2019–21</span>
+        <span class="award-nm">National Science &amp; Technology Scholarship (KOSAF)</span>
       </div>
-      <div class="service-entry">
-        <div class="service-role">2021</div>
-        <div class="service-desc">Student Scholarship Award, The Web Conference (WWW 2021)</div>
+      <div class="award-item">
+        <span class="award-yr">2018–20</span>
+        <span class="award-nm">Dean's Honor List — Top 1%, Sogang University</span>
       </div>
-      <div class="service-entry">
-        <div class="service-role">2019</div>
-        <div class="service-desc">Grand Prize, Open-Source Software Contribution (MSIT, Korea)</div>
-      </div>
-      <div class="service-entry">
-        <div class="service-role">2019–21</div>
-        <div class="service-desc">National Science &amp; Technology Scholarship (KOSAF)</div>
-      </div>
-      <div class="service-entry">
-        <div class="service-role">2018–20</div>
-        <div class="service-desc">Dean's Honor List — Top 1%, Sogang University</div>
+      <div class="award-item">
+        <span class="award-yr">2018</span>
+        <span class="award-nm">Silver Prize, Programming Competition, Sogang University</span>
       </div>
     </section>
 
@@ -589,19 +634,15 @@
 </div>
 
 <script>
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const secs = document.querySelectorAll('section[id]');
+  const navAs = document.querySelectorAll('.s-nav a');
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(a => {
-          a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-        });
-      }
+      if (e.isIntersecting)
+        navAs.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
     });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => obs.observe(s));
+  }, { rootMargin: '-15% 0px -75% 0px' });
+  secs.forEach(s => obs.observe(s));
 </script>
-
 </body>
 </html>
