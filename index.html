@@ -33,7 +33,7 @@
       color: var(--text);
       font-family: 'IBM Plex Sans', sans-serif;
       font-weight: 300;
-      font-size: clamp(13px, 1.1vw, 15.5px);
+      font-size: 14.5px;
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
@@ -63,7 +63,7 @@
     /* ── LAYOUT ── */
     .page {
       display: grid;
-      grid-template-columns: clamp(180px, 18vw, 240px) 1fr;
+      grid-template-columns: 200px 1fr;
       min-height: 100vh;
     }
 
@@ -73,7 +73,7 @@
       top: 0;
       height: 100vh;
       overflow-y: auto;
-      padding: clamp(32px, 4vw, 52px) clamp(16px, 2vw, 28px) 44px clamp(20px, 2.5vw, 32px);
+      padding: 52px 20px 44px 24px;
       border-right: 1px solid #ebebea;
       display: flex;
       flex-direction: column;
@@ -141,7 +141,7 @@
     .s-nav a.on { color: var(--accent); font-weight: 400; }
 
     /* ── MAIN ── */
-    main { padding: clamp(32px, 4vw, 52px) clamp(24px, 5vw, 76px) 120px clamp(28px, 4.5vw, 64px); max-width: min(810px, 100%); }
+    main { padding: 52px 48px 120px 52px; max-width: 100%; }
     section { margin-bottom: 60px; }
 
     /* ── SECTION HEADING ──
@@ -350,7 +350,7 @@
     .award-nm strong { font-weight: 500; color: var(--text); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 840px) {
+    @media (max-width: 640px) {
       .page { grid-template-columns: 1fr; }
       aside { position: relative; height: auto; padding: 32px 24px 20px; border-right: none; border-bottom: 1px solid #ebebea; }
       .s-nav { margin-top: 16px; }
