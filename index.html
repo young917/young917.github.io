@@ -66,12 +66,14 @@
       border-radius: 50%;
       background: var(--surface);
       border: 1px solid #e4e4e0;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.2rem;
-      color: var(--muted);
       margin-bottom: 16px;
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .s-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .s-name {
       font-family: 'Libre Baskerville', serif;
@@ -345,13 +347,13 @@
 
   <!-- SIDEBAR -->
   <aside>
-    <div class="s-photo">MC</div>
+    <div class="s-photo"><img src="photo.jpg" alt="Minyoung Choe" onerror="this.parentElement.innerHTML='MC'"></div>
     <div class="s-name">Minyoung Choe</div>
     <div class="s-pos">Ph.D. Candidate<br>Graduate School of AI<br>KAIST, Seoul</div>
     <div class="s-sep"></div>
     <div class="s-lbl">Contact</div>
     <ul class="s-links">
-      <li><a href="mailto:minyoung.choe@kaist.ac.kr"><span class="ico">✉</span>minyoung.choe@kaist.ac.kr</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#3b56525542544e555c155853545e7b505a52484f155a58155049"><span class="ico">✉</span><span class="__cf_email__" data-cfemail="315c585f485e445f561f52595e54715a505842451f50521f5a43">[email&#160;protected]</span></a></li>
       <li><a href="https://github.com/young917" target="_blank"><span class="ico">↗</span>github.com/young917</a></li>
       <li><a href="tel:+821072127482"><span class="ico">○</span>+82-10-7212-7482</a></li>
     </ul>
@@ -378,7 +380,8 @@
     <!-- ABOUT -->
     <section id="about">
       <p>I am a Ph.D. candidate in the <strong>Graduate School of Artificial Intelligence at KAIST</strong>, advised by <a href="#">Prof. Kijung Shin</a>. My research focuses on <strong>graph mining</strong> and <strong>machine learning on graphs</strong>, with a particular interest in <strong>higher-order networks (hypergraphs)</strong> — structures that capture group interactions beyond pairwise relations.</p>
-      <p>My work spans scalable generative models (<em>HyRec, MiDaS, Kronecker models</em>), hypergraph neural networks (<em>WHATsNET</em>), and LLM-integrated inference systems. I have published at <strong>KDD, WWW, ICDM, IJCAI,</strong> and <strong>TKDD</strong>, and received the <strong>Best Paper Award at IEEE ICDM 2025</strong>.</p>
+      <p>My work spans scalable generative models (<em>HyRec, MiDaS, Kronecker models</em>), hypergraph neural networks (<em>WHATsNET</em>), and LLM-integrated inference systems. I have published at <strong>KDD, WWW, ICDM, IJCAI,</strong> and <strong>TKDD</strong>.</p>
+      <p>Recently, I have become increasingly interested in <strong>knowledge graphs</strong> — in particular, how structured knowledge can enhance the reasoning capabilities of large language models. I am also broadly interested in <strong>multi-agent systems</strong>, and am currently exploring their application to tasks such as automated knowledge graph construction from scientific literature.</p>
     </section>
 
     <!-- NEWS -->
@@ -633,16 +636,8 @@
   </main>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const secs = document.querySelectorAll('section[id]');
   const navAs = document.querySelectorAll('.s-nav a');
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting)
-        navAs.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
-    });
-  }, { rootMargin: '-15% 0px -75% 0px' });
-  secs.forEach(s => obs.observe(s));
-</script>
-</body>
-</html>
+    entries.fo
